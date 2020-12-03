@@ -1,16 +1,11 @@
-# ny_times_popular_articles
+# NY Times Popular Articles
 
-A new Flutter application.
+This is a simple Flutter application that displays the most popular articles from the NY Times when items on the list are tapped takes the user to the detailed screen. using NY Times Most popular API most viewed section.
+
 
 ## Getting Started
+Clone this Flutter project.
 
-This project is a starting point for a Flutter application.
+run flutter pub get in terminal
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+run build. 
