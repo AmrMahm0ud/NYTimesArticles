@@ -13,7 +13,8 @@ class ArticlesApi {
       final extractedArticlesDate =
           (json.decode(responseArticleAPI.body))['results'] as List<dynamic>;
       extractedArticlesDate.forEach((element) {
-        loadedArticlesModel.add(ArticleModel.fromMap(element as Map<String , dynamic>));
+        loadedArticlesModel
+            .add(ArticleModel.fromMap(element as Map<String, dynamic>));
       });
       return loadedArticlesModel;
     } catch (error) {
