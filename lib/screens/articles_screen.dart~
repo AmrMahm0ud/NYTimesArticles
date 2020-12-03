@@ -53,7 +53,7 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
   //////////////////////////////////////////
   //////////////Widget/////////////////////
   ////////////////////////////////////////
-  AppBar appBar() {
+  Widget appBar() {
     return AppBar(
       backgroundColor: Color(0xFF45E3C2),
       title: Text(

@@ -34,7 +34,7 @@ class ArticleWidget extends StatelessWidget {
                 articleListTile(
                     articlesDataList[index].articlePhoto,
                     articlesDataList[index].articleTitle,
-                    articlesDataList[index].authorName),
+                    articlesDataList[index].authorName) as Widget,
               ],
             ),
             onTap: () {
