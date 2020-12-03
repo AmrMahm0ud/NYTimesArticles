@@ -56,7 +56,7 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
       backgroundColor: Colors.greenAccent,
       title: Text(
         "NY Times Most Popular",
-        style: TextStyle(fontSize: 19.0),
+        style: TextStyle(fontSize: 18.0),
       ),
       leading: GestureDetector(
         onTap: () {},

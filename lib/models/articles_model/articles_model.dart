@@ -6,6 +6,7 @@ class ArticleModel {
   String authorName;
   String articlePublishedDate;
   String articlePhoto;
+  String abstractArticle;
   final String blankPhoto =
       "https://firebasestorage.googleapis.com/v0/b/flutter-chat-ec1f2.appspot.com/o/blankphoto.jpg?alt=media&token=174ed9ac-6577-499c-bc09-c58929edf3f3";
   ArticleModel(
@@ -15,7 +16,8 @@ class ArticleModel {
       this.articleTitle,
       this.authorName,
       this.articlePublishedDate,
-      this.articlePhoto);
+      this.articlePhoto,
+      this.abstractArticle);
 
   ArticleModel.fromMap(Map<String, dynamic> articleFromMap) {
     this.articleId = articleFromMap['id'];
@@ -24,6 +26,7 @@ class ArticleModel {
     this.articleTitle = articleFromMap['title'];
     this.authorName = articleFromMap['byline'];
     this.articlePublishedDate = articleFromMap['published_date'];
+    this.abstractArticle = articleFromMap['abstract'];
     try {
       this.articlePhoto =
           articleFromMap['media'][0]['media-metadata'][1]['url'];

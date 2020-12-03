@@ -20,16 +20,59 @@ class _DetailedArticleScreenState extends State<DetailedArticleScreen> {
         children: [
           Padding(
             padding: const EdgeInsets.all(9.0),
-            child: Text(
-              widget.articleModel.articleTitle,
-              maxLines: 3,
-              style: TextStyle(fontWeight: FontWeight.bold,
-                fontSize: 20.0,
+            child: Container(
+              alignment: Alignment.topLeft,
+              child: Text(
+                widget.articleModel.articleTitle,
+                maxLines: 3,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                ),
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top :9.0 , right: 9.0 , left: 9.0),
+            padding: const EdgeInsets.only(right: 9.0, left: 9.0, bottom: 2.0),
+            child: Container(
+              alignment: Alignment.topLeft,
+              child: Text(
+                widget.articleModel.abstractArticle,
+                maxLines: 3,
+                style: TextStyle(fontSize: 15.0, color: Colors.grey),
+              ),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding:
+                      const EdgeInsets.only(top: 9.0, right: 9.0, left: 9.0),
+                  child: Text(
+                    widget.articleModel.authorName,
+                    maxLines: 3,
+                    style: TextStyle(
+                      fontSize: 10.0,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 9.0, right: 9.0, left: 9.0),
+                child: Text(
+                  widget.articleModel.articlePublishedDate,
+                  style: TextStyle(
+                    fontSize: 10.0,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 9.0, right: 9.0, left: 9.0),
             child: Center(
               child: Container(
                 height: 220.0,
@@ -45,46 +88,15 @@ class _DetailedArticleScreenState extends State<DetailedArticleScreen> {
               ),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 2.0 , left: 15.0),
-                child: Text(
-                  widget.articleModel.articleSource,
-                  style: TextStyle(
-                    fontSize: 13.0,
-                  ),
+          Container(
+            alignment: Alignment.center,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 2.0, left: 15.0),
+              child: Text(
+                "Source: ${widget.articleModel.articleSource}",
+                style: TextStyle(
+                  fontSize: 9.0,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top:2.0 , right: 15.0),
-                child: Text(
-                  widget.articleModel.articleSubsection,
-                  style: TextStyle(
-                    fontSize: 13.0,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.all(9.0),
-            child: Text(
-              "Published Date: ${widget.articleModel.articlePublishedDate}",
-              maxLines: 3,
-              style: TextStyle(fontWeight: FontWeight.bold,
-                fontSize: 15.0,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(9.0),
-            child: Text(
-              widget.articleModel.authorName,
-              maxLines: 3,
-              style: TextStyle(fontWeight: FontWeight.bold,
-                fontSize: 15.0,
               ),
             ),
           ),

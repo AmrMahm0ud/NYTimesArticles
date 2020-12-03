@@ -16,44 +16,25 @@ class ArticleWidget extends StatelessWidget {
               children: [
                 Positioned(
                   bottom: 3,
-                  right: 35,
+                  right: 70,
                   child: Row(
                     children: [
                       Icon(
                         Icons.date_range_sharp,
                         size: 15,
+                        color: Colors.grey,
                       ),
-                      Text(articlesDataList[index].articlePublishedDate),
+                      Text(
+                        articlesDataList[index].articlePublishedDate,
+                        style: TextStyle(fontSize: 11.0, color: Colors.grey),
+                      ),
                     ],
                   ),
                 ),
-                ListTile(
-                  leading: ClipOval(
-                    child: Image(
-                      image: NetworkImage(
-                        articlesDataList[index].articlePhoto,
-                      ),
-                      fit: BoxFit.cover,
-                      width: 60,
-                      height: 150,
-                    ),
-                  ),
-                  trailing: Icon(Icons.arrow_forward_ios_outlined),
-                  title: Padding(
-                    padding: const EdgeInsets.only(bottom: 10.0),
-                    child: Text(
-                      articlesDataList[index].articleTitle,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  contentPadding: EdgeInsets.all(15.0),
-                  subtitle: Text(
-                    articlesDataList[index].authorName,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
+                articleListTile(
+                    articlesDataList[index].articlePhoto,
+                    articlesDataList[index].articleTitle,
+                    articlesDataList[index].authorName),
               ],
             ),
             onTap: () {
@@ -61,15 +42,50 @@ class ArticleWidget extends StatelessWidget {
             },
           );
         });
+  }
+  /////////////////////////////////////
+  //////////////Widgets////////////////
+  ////////////////////////////////////
 
+  articleListTile(String articlePhoto, String articleTitle, String authorName) {
+    return ListTile(
+      leading: ClipOval(
+        child: Image(
+          image: NetworkImage(
+            articlePhoto,
+          ),
+          fit: BoxFit.cover,
+          width: 60,
+          height: 130,
+        ),
+      ),
+      trailing: Icon(Icons.arrow_forward_ios_outlined),
+      title: Padding(
+        padding: const EdgeInsets.only(bottom: 10.0),
+        child: Text(
+          articleTitle,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+        ),
+      ),
+      contentPadding: EdgeInsets.all(15.0),
+      subtitle: Text(
+        authorName,
+        maxLines: 2,
+        overflow: TextOverflow.ellipsis,
+        style: TextStyle(color: Colors.grey),
+      ),
+    );
   }
 
 //////////////////////////////////////
 //////////////Helper Method///////////
 /////////////////////////////////////
 
-  navToDetailedArticleScreen(BuildContext context , ArticleModel articleModel ){
-    Navigator.push(context , MaterialPageRoute(builder: (context) => DetailedArticleScreen(articleModel)));
+  navToDetailedArticleScreen(BuildContext context, ArticleModel articleModel) {
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => DetailedArticleScreen(articleModel)));
   }
-  
 }
