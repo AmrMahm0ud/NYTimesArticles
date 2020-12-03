@@ -13,4 +13,3 @@ class NetworkErrorArticlesState extends ArticlesBlocState {}
 
 class ErrorArticlesState extends ArticlesBlocState {}
 
-class ReceivedDetailedArticleState extends ArticlesBlocState {}

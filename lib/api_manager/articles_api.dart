@@ -9,14 +9,14 @@ class ArticlesApi {
     try {
       final String url =
           "https://api.nytimes.com/svc/mostpopular/v2/viewed/30.json?api-key=gFRTIQwAwAAgVvVemuXAprEFLTSs5hEG";
-      final response = await http.get(url);
+      final responseArticleAPI = await http.get(url);
       final extractedArticlesDate =
-          (json.decode(response.body))['results'] as List<dynamic>;
+          (json.decode(responseArticleAPI.body))['results'] as List<dynamic>;
       extractedArticlesDate.forEach((element) {
         loadedArticlesModel.add(ArticleModel.fromMap(element));
       });
       return loadedArticlesModel;
-    } catch (error){
+    } catch (error) {
       throw error;
     }
   }

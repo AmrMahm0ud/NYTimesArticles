@@ -17,13 +17,10 @@ class ArticlesRepo extends BaseArticlesRepo {
     try {
       receivedArticlesDataList = await articlesApi.fetchArticlesData();
       articlesBlocState = ReceivedArticlesState(receivedArticlesDataList);
-      print(receivedArticlesDataList.length);
     } on SocketException {
       articlesBlocState = NetworkErrorArticlesState();
     } catch (error) {
-    print(error);
       articlesBlocState = ErrorArticlesState();
-
     }
     return articlesBlocState;
   }

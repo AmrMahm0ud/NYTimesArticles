@@ -5,7 +5,7 @@ import 'package:ny_times_popular_articles/bloc/articles_bloc/articles_bloc_state
 
 class ArticlesBloc extends Bloc<ArticlesBlocEvent, ArticlesBlocState> {
   final BaseArticlesRepo baseArticlesRepo;
-  ArticlesBloc(this.baseArticlesRepo) : super(null);
+  ArticlesBloc(this.baseArticlesRepo) : super(LoadingArticlesState());
 
   @override
   Stream<ArticlesBlocState> mapEventToState(ArticlesBlocEvent event) async* {
