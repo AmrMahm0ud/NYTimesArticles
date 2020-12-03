@@ -2,9 +2,11 @@
 
 This is a simple Flutter application that displays the most popular articles from the NY Times when items on the list are tapped takes the user to the detailed screen. using NY Times Most popular API most viewed section.
 
+This flutter application build using Bloc State Management.
+
 
 ## Getting Started
-Clone this Flutter project.
+Clone NYTimes Popular Articles project.
 
 run "flutter pub get" command in terminal
 
