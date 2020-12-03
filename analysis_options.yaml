@@ -23,8 +23,8 @@ linter:
     avoid_print: true
     camel_case_types: true
     flutter_style_todos: true
-    prefer_double_quotes: true
-    prefer_relative_imports: true
+    prefer_double_quotes: false
+    prefer_relative_imports: false
     public_member_api_docs: false
     constant_identifier_names: false
 
