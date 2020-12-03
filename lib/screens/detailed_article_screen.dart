@@ -13,7 +13,7 @@ class _DetailedArticleScreenState extends State<DetailedArticleScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Color(0xFF45E3C2),
         title: Text("NY Times Most Popular"),
       ),
       body: Column(

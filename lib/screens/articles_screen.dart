@@ -55,7 +55,7 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
   ////////////////////////////////////////
   Widget appBar() {
     return AppBar(
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: Color(0xFF45E3C2),
       title: Text(
         "NY Times Most Popular",
         style: TextStyle(fontSize: 18.0),

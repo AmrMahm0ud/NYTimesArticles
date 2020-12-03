@@ -56,7 +56,7 @@ class ArticleWidget extends StatelessWidget {
           ),
           fit: BoxFit.cover,
           width: 60,
-          height: 130,
+          height: 60,
         ),
       ),
       trailing: Icon(Icons.arrow_forward_ios_outlined),
@@ -64,6 +64,7 @@ class ArticleWidget extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 10.0),
         child: Text(
           articleTitle,
+          style: TextStyle(fontSize: 13.0),
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
         ),
@@ -73,7 +74,7 @@ class ArticleWidget extends StatelessWidget {
         authorName,
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
-        style: TextStyle(color: Colors.grey),
+        style: TextStyle(color: Colors.grey, fontSize: 12.0),
       ),
     );
   }
