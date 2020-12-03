@@ -8,7 +8,7 @@ class ArticlesApi {
     List<ArticleModel> loadedArticlesModel = [];
     try {
       final String url =
-          "https://api.nytimes.com/svc/mostpopular/v2/viewed/30.json?api-key=gFRTIQwAwAAgVvVemuXAprEFLTSs5hEG";
+          "https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key=gFRTIQwAwAAgVvVemuXAprEFLTSs5hEG";
       final responseArticleAPI = await http.get(url);
       final extractedArticlesDate =
           (json.decode(responseArticleAPI.body))['results'] as List<dynamic>;
