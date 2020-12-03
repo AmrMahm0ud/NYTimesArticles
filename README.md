@@ -6,6 +6,6 @@ This is a simple Flutter application that displays the most popular articles fro
 ## Getting Started
 Clone this Flutter project.
 
-run flutter pub get in terminal
+run "flutter pub get" command in terminal
 
 run build. 
