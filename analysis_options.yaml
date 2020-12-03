@@ -1,0 +1,42 @@
+#include: package:effective_dart/analysis_options.yaml
+# we will not use the pedantic library for code analytics
+# because the effective dart library already inspired from it. [check refs]
+# include: package:pedantic/analysis_options.yaml
+
+analyzer:
+
+  exclude:
+    - test/*.dart
+
+  strong-mode:
+    implicit-casts: false
+
+  # you have 4 options to write
+  # ignore, error, warning, info
+  errors:
+    avoid_print: error
+    flutter_style_todos: info
+
+linter:
+  rules:
+    todo: true
+    avoid_print: true
+    camel_case_types: true
+    flutter_style_todos: true
+    prefer_double_quotes: true
+    prefer_relative_imports: true
+    public_member_api_docs: false
+    constant_identifier_names: false
+
+
+
+# used refs:
+# https://dart-lang.github.io/linter/lints/
+
+# references:
+# https://dart.dev/guides/language/analysis-options
+# https://dart-lang.github.io/linter/lints/index.html
+
+# https://pub.dev/packages/pedantic [rules enforced internally at Google]
+# https://github.com/tenhobi/effective_dart [effective dart]
+# https://github.com/flutter/flutter/blob/master/packages/flutter/lib/analysis_options_user.yaml [flutter rules]
