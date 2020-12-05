@@ -5,14 +5,16 @@ import 'package:ny_times_popular_articles/models/articles_model/articles_model.d
 
 class ArticlesApi {
   Future<List<ArticleModel>> fetchArticlesData() async {
+    const String period = "7" ;
+    const String APIkey = "gFRTIQwAwAAgVvVemuXAprEFLTSs5hEG" ;
     List<ArticleModel> loadedArticlesModel = [];
     try {
-      final String url =
-          "https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key=gFRTIQwAwAAgVvVemuXAprEFLTSs5hEG";
+      const String url =
+          "https://api.nytimes.com/svc/mostpopular/v2/viewed/${period}.json?api-key=${APIkey}";
       final responseArticleAPI = await http.get(url);
-      final extractedArticlesDate =
+      final extractedArticlesData =
           (json.decode(responseArticleAPI.body))['results'] as List<dynamic>;
-      extractedArticlesDate.forEach((element) {
+      extractedArticlesData.forEach((element) {
         loadedArticlesModel
             .add(ArticleModel.fromMap(element as Map<String, dynamic>));
       });
