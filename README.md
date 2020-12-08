@@ -24,4 +24,9 @@ To run your app from the command-line:
 
 ## Run Code analysis
   To get static code review for the code run this command "flutter analyze"
+ 
+ 
+## ScreenShot
 
+![screen1](https://user-images.githubusercontent.com/60762274/101420241-6b69b000-38fa-11eb-93b4-0e40a2496dab.jpeg)
+![screen2](https://user-images.githubusercontent.com/60762274/101420330-948a4080-38fa-11eb-8b44-2a9865d4e3b7.jpeg)
